@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hy" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>Regiscode — Admin Panel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans p-4 sm:p-8">
+
+  <!-- 1. LOGIN FORM (Երևում է, երբ ադմինը մուտք չի գործել) -->
+  <div id="loginSection" class="max-w-md mx-auto my-20 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl font-bold">Admin Login</h2>
+      <p class="text-slate-400 text-xs mt-1">Regiscode Կառավարման Պանել</p>
+    </div>
+    <form id="loginForm" class="space-y-4">
+      <div>
+        <label class="block text-xs font-semibold text-slate-400 mb-1">Էլ-փոստ</label>
+        <input type="email" id="loginEmail" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+      </div>
+      <div>
+        <label class="block text-xs font-semibold text-slate-400 mb-1">Գաղտնաբառ</label>
+        <input type="password" id="loginPassword" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+      </div>
+      <p id="loginError" class="text-rose-500 text-xs hidden text-center"></p>
+      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2.5 rounded-xl transition text-sm">
+        Մուտք Գործել
+      </button>
+    </form>
+  </div>
+
+  <!-- 2. ADMIN DASHBOARD (Երևում է միայն LOGIN-ից հետո) -->
+  <div id="adminDashboard" class="max-w-7xl mx-auto space-y-6 hidden">
+    
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-800 pb-6 gap-4">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-bold">Leads Admin Panel</h1>
+        <p class="text-slate-400 text-sm">Մուտքային հայտեր և հաճախորդների կառավարում</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-4 py-2 rounded-xl text-sm font-semibold">
+          WhatsApp: +37433488275
+        </div>
+        <button id="logoutBtn" class="bg-rose-600/20 text-rose-400 hover:bg-rose-600/30 border border-rose-500/20 px-4 py-2 rounded-xl text-xs font-bold transition">
+          Ելք
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap gap-2 pt-2" id="filterContainer">
+      <button data-filter="all" class="filter-btn active bg-indigo-600 text-white px-4 py-2 rounded-xl text-xs font-bold transition border border-indigo-500">
+        Բոլորը
+      </button>
+      <button data-filter="Ուսումնասիրում" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-4 py-2 rounded-xl text-xs font-bold hover:bg-slate-800 transition">
+        Ուսումնասիրում
+      </button>
+      <button data-filter="Կոդավորում" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-4 py-2 rounded-xl text-xs font-bold hover:bg-slate-800 transition">
+        Կոդավորում
+      </button>
+      <button data-filter="Ավարտված" class="filter-btn bg-slate-900 text-slate-300 border border-slate-800 px-4 py-2 rounded-xl text-xs font-bold hover:bg-slate-800 transition">
+        Ավարտված
+      </button>
+    </div>
+
+    <!-- Leads Table -->
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-x-auto shadow-xl">
+      <table class="w-full text-left text-sm text-slate-300 min-w-[800px]">
+        <thead class="bg-slate-950 text-xs font-semibold uppercase tracking-wider text-slate-400 border-b border-slate-800">
+          <tr>
+            <th class="p-4">Անուն</th>
+            <th class="p-4">Հեռախոս</th>
+            <th class="p-4">Տեսակ</th>
+            <th class="p-4">Ոլորտ</th>
+            <th class="p-4">Լսարան</th>
+            <th class="p-4">Փուլ (Status)</th>
+            <th class="p-4">Գործողություն</th>
+          </tr>
+        </thead>
+        <tbody id="leadsTableBody" class="divide-y divide-slate-800">
+          <!-- Dynamically populated from Firestore -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="hy" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="doc-title">Մեր Մասին — Smart Web Solutions / Regiscode</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Ապահովում է հայերեն տեքստերի գեղեցիկ ու ճիշտ տողադարձը բոլոր սարքերում */
+    body {
+      word-break: break-word;
+      overflow-wrap: break-word;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white break-words hyphens-auto">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex flex-col group shrink-0">
+        <span class="text-base sm:text-lg md:text-xl font-black tracking-wider text-white uppercase leading-none group-hover:text-brand-400 transition">
+          SMART WEB SOLUTIONS
+        </span>
+        <span class="text-[10px] sm:text-[11px] font-bold text-slate-400 tracking-widest uppercase mt-1 flex items-center gap-1">
+          <span>REGISCODE</span>
+          <span class="text-slate-600">|</span>
+          <span>WEB STUDIO</span>
+          <span class="text-xs">🚀</span>
+        </span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-400">
+        <a href="index.html" data-i18n="nav_home" class="hover:text-white transition">Գլխավոր</a>
+        <a href="car.html" data-i18n="nav_services" class="hover:text-white transition">Ծառայություններ</a>
+        <a href="about.html" data-i18n="nav_about" class="text-brand-400 font-semibold">Մեր մասին</a>
+        <a href="index.html#calculator" data-i18n="nav_calc" class="hover:text-white transition">Հաշվիչ / Հայտ</a>
+      </nav>
+
+      <!-- Language Selector & WhatsApp Container -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        
+        <!-- Animated Language Switcher Button -->
+        <div class="relative bg-slate-900/90 border border-slate-800 p-1 rounded-full flex items-center shadow-inner">
+          <button onclick="switchLanguage('hy')" id="lang-hy" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-white bg-brand-600 shadow-md shadow-brand-500/30">
+            ARM
+          </button>
+          <button onclick="switchLanguage('ru')" id="lang-ru" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white">
+            RUS
+          </button>
+          <button onclick="switchLanguage('en')" id="lang-en" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white">
+            ENG
+          </button>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/37433488275" target="_blank" class="flex items-center gap-2 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium hover:bg-emerald-600/30 transition shadow-lg shadow-emerald-500/10 text-xs sm:text-sm">
+          <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
+          <span data-i18n="wa_contact" class="hidden sm:inline">WhatsApp Կապ</span>
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 sm:pt-36 pb-12 sm:pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,_rgba(99,102,241,0.12),transparent_60%)]"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4 sm:space-y-6">
+      <span data-i18n="hero_badge" class="px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-widest bg-brand-500/10 text-brand-400 border border-brand-500/20 inline-block">
+        Մատչելի Գներ & Անհատական Մոտեցում
+      </span>
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight sm:leading-tight">
+        <span data-i18n="hero_title_1">Ադապտիվ Կայքեր</span> <span data-i18n="hero_title_2" class="bg-gradient-to-r from-brand-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">Ձեր Բյուջեին Համապատասխան</span>
+      </h1>
+      <p data-i18n="hero_desc" class="text-slate-400 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed sm:leading-relaxed">
+        Smart Web Solutions (Regiscode)-ն առաջարկում է բարձր որակի վեբ կայքեր, e-commerce պլատֆորմներ և CRM համակարգեր՝ յուրաքանչյուր սարքին (Mobile, Tablet, Desktop) լիարժեք ադապտացված դիզայնով և շուկայում ամենամատչելի ու հասանելի գներով։
+      </p>
+    </div>
+  </section>
+
+  <!-- Stats Grid -->
+  <section class="py-8 sm:py-10 border-y border-slate-900 bg-slate-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+      <div class="space-y-1">
+        <div class="text-2xl sm:text-3xl md:text-4xl font-black text-brand-400">100%</div>
+        <div data-i18n="stat_1" class="text-[11px] sm:text-xs uppercase tracking-wider text-slate-400 font-semibold">Ադապտիվ Դիզայն</div>
+      </div>
+      <div class="space-y-1">
+        <div data-i18n="stat_2_val" class="text-2xl sm:text-3xl md:text-4xl font-black text-emerald-400">Մատչելի</div>
+        <div data-i18n="stat_2_lbl" class="text-[11px] sm:text-xs uppercase tracking-wider text-slate-400 font-semibold">Ճկուն Գնացուցակ</div>
+      </div>
+      <div class="space-y-1">
+        <div class="text-2xl sm:text-3xl md:text-4xl font-black text-indigo-400">24/7</div>
+        <div data-i18n="stat_3" class="text-[11px] sm:text-xs uppercase tracking-wider text-slate-400 font-semibold">Անխափան Աշխատանք</div>
+      </div>
+      <div class="space-y-1">
+        <div class="text-2xl sm:text-3xl md:text-4xl font-black text-purple-400">Fast</div>
+        <div data-i18n="stat_4" class="text-[11px] sm:text-xs uppercase tracking-wider text-slate-400 font-semibold">Բարձր Արագություն</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services & Advantages -->
+  <section class="py-16 sm:py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 sm:mb-16 space-y-3">
+        <h2 data-i18n="services_title" class="text-2xl sm:text-3xl font-bold">Ինչո՞վ Ենք Մենք Զբաղվում</h2>
+        <p data-i18n="services_subtitle" class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+          Որակյալ, արագ և ադապտիվ ծրագրային լուծումներ առանց ավելորդ վճարների։
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Card 1 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-brand-500/50 transition duration-300 space-y-3 sm:space-y-4">
+          <div class="w-12 h-12 bg-brand-500/10 text-brand-400 rounded-2xl flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 data-i18n="card1_title" class="text-lg sm:text-xl font-bold text-white">100% Ադապտիվ Դիզայն</h3>
+          <p data-i18n="card1_desc" class="text-slate-400 text-xs sm:text-sm leading-relaxed sm:leading-relaxed">
+            Ձեր կայքը կամ համակարգը կունենա կատարյալ տեսք և աշխատանք ցանկացած սմարթֆոնի, պլանշետի կամ համակարգչի էկրանին։
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-brand-500/50 transition duration-300 space-y-3 sm:space-y-4">
+          <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <h3 data-i18n="card2_title" class="text-lg sm:text-xl font-bold text-white">Մատչելի Գներ</h3>
+          <p data-i18n="card2_desc" class="text-slate-400 text-xs sm:text-sm leading-relaxed sm:leading-relaxed">
+            Մենք առաջարկում ենք ճկուն գնային պայմաններ, որոնք հասանելի են ինչպես սկսնակ, այնպես էլ զարգացող բիզնեսներին։
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-brand-500/50 transition duration-300 space-y-3 sm:space-y-4">
+          <div class="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center text-xl font-bold">
+            <i class="fa-solid fa-diagram-project"></i>
+          </div>
+          <h3 data-i18n="card3_title" class="text-lg sm:text-xl font-bold text-white">Custom CRM & Խանութներ</h3>
+          <p data-i18n="card3_desc" class="text-slate-400 text-xs sm:text-sm leading-relaxed sm:leading-relaxed">
+            Պատվերների, պահեստի և client-ների կառավարման անհատական համակարգեր՝ ձեր բիզնեսի աշխատանքը հեշտացնելու համար։
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow Section -->
+  <section class="py-16 sm:py-20 bg-slate-900/40 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 sm:mb-16 space-y-3">
+        <h2 data-i18n="wf_title" class="text-2xl sm:text-3xl font-bold">Ինչպես Ենք Աշխատում</h2>
+        <p data-i18n="wf_subtitle" class="text-slate-400 text-sm sm:text-base">4 պարզ քայլ՝ գաղափարից մինչև պատրաստի նախագիծ</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div class="p-5 sm:p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2 sm:space-y-3 relative">
+          <span class="text-3xl sm:text-4xl font-black text-slate-800">01</span>
+          <h4 data-i18n="wf_step1_title" class="text-base sm:text-lg font-bold text-white">Քննարկում & Բյուջե</h4>
+          <p data-i18n="wf_step1_desc" class="text-xs text-slate-400 leading-relaxed">Ճշտում ենք պահանջները և ընտրում Ձեր բյուջեին ամենահամապատասխան տարբերակը։</p>
+        </div>
+        <div class="p-5 sm:p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2 sm:space-y-3 relative">
+          <span class="text-3xl sm:text-4xl font-black text-slate-800">02</span>
+          <h4 data-i18n="wf_step2_title" class="text-base sm:text-lg font-bold text-white">Ադապտիվ UI/UX</h4>
+          <p data-i18n="wf_step2_desc" class="text-xs text-slate-400 leading-relaxed">Մշակում ենք հարմարավետ դիզայն բոլոր չափսերի էկրանների համար։</p>
+        </div>
+        <div class="p-5 sm:p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2 sm:space-y-3 relative">
+          <span class="text-3xl sm:text-4xl font-black text-slate-800">03</span>
+          <h4 data-i18n="wf_step3_title" class="text-base sm:text-lg font-bold text-white">Ծրագրավորում</h4>
+          <p data-i18n="wf_step3_desc" class="text-xs text-slate-400 leading-relaxed">Ստեղծում ենք արագ, անվտանգ և հուսալի կոդ։</p>
+        </div>
+        <div class="p-5 sm:p-6 bg-slate-950 border border-slate-800 rounded-2xl space-y-2 sm:space-y-3 relative">
+          <span class="text-3xl sm:text-4xl font-black text-slate-800">04</span>
+          <h4 data-i18n="wf_step4_title" class="text-base sm:text-lg font-bold text-white">Թողարկում & Սպասարկում</h4>
+          <p data-i18n="wf_step4_desc" class="text-xs text-slate-400 leading-relaxed">Հանձնում ենք պատրաստի նախագիծը և ապահովում տեխնիկական աջակցություն։</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-16 sm:py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-8">
+      <h2 data-i18n="cta_title" class="text-2xl sm:text-4xl font-bold">Ստացեք Մատչելի & Որակյալ Վեբ Լուծում</h2>
+      <p data-i18n="cta_desc" class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+        Կապվեք մեզ հետ այսօր՝ Ձեր նախագծի ճշգրիտ արժեքը հաշվարկելու համար:
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="index.html#calculator" data-i18n="cta_btn_calc" class="w-full sm:w-auto bg-gradient-to-r from-brand-600 to-indigo-600 px-8 py-3.5 rounded-xl font-bold hover:opacity-95 transition shadow-lg shadow-brand-500/20 text-center">
+          Հաշվարկել Նախագիծը
+        </a>
+        <a href="https://wa.me/37433488275" target="_blank" class="w-full sm:w-auto bg-slate-900 border border-slate-800 px-8 py-3.5 rounded-xl font-bold text-emerald-400 hover:bg-slate-800 transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span data-i18n="cta_btn_wa">Գրել WhatsApp-ին</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 pt-12 sm:pt-16 pb-10 sm:pb-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-10">
+      
+      <!-- Studio Info -->
+      <div class="space-y-4 md:col-span-1">
+        <div class="flex flex-col">
+          <span class="text-base sm:text-lg font-black tracking-wider text-white uppercase leading-none">
+            SMART WEB SOLUTIONS
+          </span>
+          <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase mt-1 flex items-center gap-1">
+            <span>REGISCODE</span>
+            <span class="text-slate-600">|</span>
+            <span>WEB STUDIO</span>
+            <span class="text-xs">🚀</span>
+          </span>
+        </div>
+        <p data-i18n="footer_about" class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          Վեբ կայքերի, CRM համակարգերի և բիզնես լուծումների նախագծում ու ավտոմատացում։
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-3">
+        <h4 data-i18n="footer_nav_head" class="text-white font-bold uppercase text-xs tracking-widest">Նավիգացիա</h4>
+        <ul class="space-y-2 text-xs sm:text-sm">
+          <li><a href="index.html" data-i18n="nav_home" class="hover:text-brand-400 transition">Գլխավոր</a></li>
+          <li><a href="car.html" data-i18n="nav_services" class="hover:text-brand-400 transition">Ծառայություններ</a></li>
+          <li><a href="about.html" data-i18n="nav_about" class="hover:text-brand-400 transition">Մեր մասին</a></li>
+          <li><a href="index.html#calculator" data-i18n="nav_calc" class="hover:text-brand-400 transition">Հաշվիչ / Հայտ</a></li>
+        </ul>
+      </div>
+
+      <!-- Services List -->
+      <div class="space-y-3">
+        <h4 data-i18n="footer_serv_head" class="text-white font-bold uppercase text-xs tracking-widest">Ուղղություններ</h4>
+        <ul class="space-y-2 text-xs sm:text-sm">
+          <li data-i18n="f_s1">Օնլայն Խանութներ (E-commerce)</li>
+          <li data-i18n="f_s2">Անհատական CRM Համակարգեր</li>
+          <li data-i18n="f_s3">Բիզնես Վեբ Կայքեր</li>
+          <li data-i18n="f_s4">Ավտոմատացում & API</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-3">
+        <h4 data-i18n="footer_contact_head" class="text-white font-bold uppercase text-xs tracking-widest">Կապ Մեզ Հետ</h4>
+        <div class="space-y-2 text-xs sm:text-sm">
+          <p class="flex items-center gap-2">
+            <i class="fa-solid fa-phone text-brand-400"></i>
+            <span>+374 33 488275</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-brand-400"></i>
+            <a href="mailto:regiscode.am@gmail.com" class="hover:underline hover:text-white transition">regiscode.am@gmail.com</a>
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+            <a href="https://wa.me/37433488275" target="_blank" data-i18n="f_wa_text" class="hover:underline">WhatsApp Գրել</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-10 sm:mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center sm:text-left">
+      <p data-i18n="copyright">© 2026 SMART WEB SOLUTIONS / REGISCODE. Բոլոր իրավունքները պաշտպանված են:</p>
+      <div class="flex gap-4">
+        <a href="car.html" data-i18n="nav_services" class="hover:text-slate-400 transition">Ծառայություններ</a>
+        <a href="about.html" data-i18n="nav_about" class="hover:text-slate-400 transition">Մեր մասին</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Language Switcher Script -->
+  <script>
+    const translations = {
+      hy: {
+        doc_title: "Մեր Մասին — Smart Web Solutions / Regiscode",
+        nav_home: "Գլխավոր",
+        nav_services: "Ծառայություններ",
+        nav_about: "Մեր մասին",
+        nav_calc: "Հաշվիչ / Հայտ",
+        wa_contact: "WhatsApp Կապ",
+        hero_badge: "Մատչելի Գներ & Անհատական Մոտեցում",
+        hero_title_1: "Ադապտիվ Կայքեր",
+        hero_title_2: "Ձեր Բյուջեին Համապատասխան",
+        hero_desc: "Smart Web Solutions (Regiscode)-ն առաջարկում է բարձր որակի վեբ կայքեր, e-commerce պլատֆորմներ և CRM համակարգեր՝ յուրաքանչյուր սարքին (Mobile, Tablet, Desktop) լիարժեք ադապտացված դիզայնով և շուկայում ամենամատչելի ու հասանելի գներով։",
+        stat_1: "Ադապտիվ Դիզայն",
+        stat_2_val: "Մատչելի",
+        stat_2_lbl: "Ճկուն Գնացուցակ",
+        stat_3: "Անխափան Աշխատանք",
+        stat_4: "Բարձր Արագություն",
+        services_title: "Ինչո՞վ Ենք Մենք Զբաղվում",
+        services_subtitle: "Որակյալ, արագ և ադապտիվ ծրագրային լուծումներ առանց ավելորդ վճարների։",
+        card1_title: "100% Ադապտիվ Դիզայն",
+        card1_desc: "Ձեր կայքը կամ համակարգը կունենա կատարյալ տեսք և աշխատանք ցանկացած սմարթֆոնի, պլանշետի կամ համակարգչի էկրանին։",
+        card2_title: "Մատչելի Գներ",
+        card2_desc: "Մենք առաջարկում ենք ճկուն գնային պայմաններ, որոնք հասանելի են ինչպես սկսնակ, այնպես էլ զարգացող բիզնեսներին։",
+        card3_title: "Custom CRM & Խանութներ",
+        card3_desc: "Պատվերների, պահեստի և client-ների կառավարման անհատական համակարգեր՝ ձեր բիզնեսի աշխատանքը հեշտացնելու համար։",
+        wf_title: "Ինչպես Ենք Աշխատում",
+        wf_subtitle: "4 պարզ քայլ՝ գաղափարից մինչև պատրաստի նախագիծ",
+        wf_step1_title: "Քննարկում & Բյուջե",
+        wf_step1_desc: "Ճշտում ենք պահանջները և ընտրում Ձեր բյուջեին ամենահամապատասխան տարբերակը։",
+        wf_step2_title: "Ադապտիվ UI/UX",
+        wf_step2_desc: "Մշակում ենք հարմարավետ դիզայն բոլոր չափսերի էկրանների համար։",
+        wf_step3_title: "Ծրագրավորում",
+        wf_step3_desc: "Ստեղծում ենք արագ, անվտանգ և հուսալի կոդ։",
+        wf_step4_title: "Թողարկում & Սպասարկում",
+        wf_step4_desc: "Հանձնում ենք պատրաստի նախագիծը և ապահովում տեխնիկական աջակցություն։",
+        cta_title: "Ստացեք Մատչելի & Որակյալ Վեբ Լուծում",
+        cta_desc: "Կապվեք մեզ հետ այսօր՝ Ձեր նախագծի ճշգրիտ արժեքը հաշվարկելու համար:",
+        cta_btn_calc: "Հաշվարկել Նախագիծը",
+        cta_btn_wa: "Գրել WhatsApp-ին",
+        footer_about: "Վեբ կայքերի, CRM համակարգերի և բիզնես լուծումների նախագծում ու ավտոմատացում։",
+        footer_nav_head: "Նավիգացիա",
+        footer_serv_head: "Ուղղություններ",
+        f_s1: "Օնլայն Խանութներ (E-commerce)",
+        f_s2: "Անհատական CRM Համակարգեր",
+        f_s3: "Բիզնես Վեբ Կայքեր",
+        f_s4: "Ավտոմատացում & API",
+        footer_contact_head: "Կապ Մեզ Հետ",
+        f_wa_text: "WhatsApp Գրել",
+        copyright: "© 2026 SMART WEB SOLUTIONS / REGISCODE. Բոլոր իրավունքները պաշտպանված են:"
+      },
+      ru: {
+        doc_title: "О нас — Smart Web Solutions / Regiscode",
+        nav_home: "Главная",
+        nav_services: "Услуги",
+        nav_about: "О нас",
+        nav_calc: "Калькулятор / Заявка",
+        wa_contact: "Связаться в WhatsApp",
+        hero_badge: "Доступные Цены и Индивидуальный Подход",
+        hero_title_1: "Адаптивные Сайты",
+        hero_title_2: "Под Ваш Бюджет",
+        hero_desc: "Smart Web Solutions (Regiscode) предлагает высококачественные веб-сайты, e-commerce платформы и CRM системы с адаптивным дизайном для любых устройств (Mobile, Tablet, Desktop) по самым доступным ценам на рынке.",
+        stat_1: "Адаптивный Дизайн",
+        stat_2_val: "Доступно",
+        stat_2_lbl: "Гибкий Прайс-лист",
+        stat_3: "Работа 24/7",
+        stat_4: "Высокая Скорость",
+        services_title: "Чем Мы Занимаемся",
+        services_subtitle: "Качественные, быстрые и адаптивные программные решения без переплат.",
+        card1_title: "100% Адаптивный Дизайн",
+        card1_desc: "Ваш сайт или система будут идеально выглядеть и работать на экране любого смартфона, планшета или компьютера.",
+        card2_title: "Доступные Цены",
+        card2_desc: "Мы предлагаем гибкие ценовые условия, доступные как для начинающих, так и для развивающихся компаний.",
+        card3_title: "Custom CRM и Магазины",
+        card3_desc: "Индивидуальные системы управления заказами, складом и клиентами для упрощения вашего бизнеса.",
+        wf_title: "Как Мы Работаем",
+        wf_subtitle: "4 простых шага: от идеи до готового проекта",
+        wf_step1_title: "Обсуждение и Бюджет",
+        wf_step1_desc: "Уточняем требования и подбираем наиболее подходящий вариант под ваш бюджет.",
+        wf_step2_title: "Адаптивный UI/UX",
+        wf_step2_desc: "Разрабатываем удобный дизайн для экранов любых размеров.",
+        wf_step3_title: "Программирование",
+        wf_step3_desc: "Создаем быстрый, безопасный и надежный код.",
+        wf_step4_title: "Запуск и Поддержка",
+        wf_step4_desc: "Сдаем готовый проект и обеспечиваем техническую поддержку.",
+        cta_title: "Получите Качественное и Доступное Веб-Решение",
+        cta_desc: "Свяжитесь с нами сегодня, чтобы рассчитать точную стоимость вашего проекта:",
+        cta_btn_calc: "Рассчитать Проект",
+        cta_btn_wa: "Написать в WhatsApp",
+        footer_about: "Проектирование и автоматизация веб-сайтов, CRM систем и бизнес-решений.",
+        footer_nav_head: "Навигация",
+        footer_serv_head: "Направления",
+        f_s1: "Интернет-магазины (E-commerce)",
+        f_s2: "Индивидуальные CRM Системы",
+        f_s3: "Бизнес Веб-Сайты",
+        f_s4: "Автоматизация и API",
+        footer_contact_head: "Контакты",
+        f_wa_text: "Написать в WhatsApp",
+        copyright: "© 2026 SMART WEB SOLUTIONS / REGISCODE. Все права защищены."
+      },
+      en: {
+        doc_title: "About Us — Smart Web Solutions / Regiscode",
+        nav_home: "Home",
+        nav_services: "Services",
+        nav_about: "About Us",
+        nav_calc: "Calculator / Request",
+        wa_contact: "WhatsApp Contact",
+        hero_badge: "Affordable Prices & Individual Approach",
+        hero_title_1: "Responsive Websites",
+        hero_title_2: "Tailored to Your Budget",
+        hero_desc: "Smart Web Solutions (Regiscode) offers high-quality websites, e-commerce platforms, and custom CRM systems with fully responsive design for all devices (Mobile, Tablet, Desktop) at the most accessible market prices.",
+        stat_1: "Responsive Design",
+        stat_2_val: "Affordable",
+        stat_2_lbl: "Flexible Pricing",
+        stat_3: "24/7 Uptime",
+        stat_4: "High Speed",
+        services_title: "What We Do",
+        services_subtitle: "High-quality, fast, and responsive software solutions without unnecessary costs.",
+        card1_title: "100% Responsive Design",
+        card1_desc: "Your website or system will look and perform flawlessly on any smartphone, tablet, or desktop screen.",
+        card2_title: "Affordable Prices",
+        card2_desc: "We provide flexible pricing terms accessible to both early startups and growing businesses.",
+        card3_title: "Custom CRM & Stores",
+        card3_desc: "Tailor-made order, inventory, and customer management systems to streamline your operations.",
+        wf_title: "How We Work",
+        wf_subtitle: "4 simple steps from concept to final launch",
+        wf_step1_title: "Discussion & Budget",
+        wf_step1_desc: "We clarify your requirements and choose the best option fitting your budget.",
+        wf_step2_title: "Responsive UI/UX",
+        wf_step2_desc: "We craft user-friendly interfaces tailored for screens of all sizes.",
+        wf_step3_title: "Development",
+        wf_step3_desc: "We engineer fast, secure, and reliable code.",
+        wf_step4_title: "Launch & Support",
+        wf_step4_desc: "We deliver the finalized project and provide ongoing technical support.",
+        cta_title: "Get an Affordable & Quality Web Solution",
+        cta_desc: "Contact us today to calculate the exact cost for your upcoming project:",
+        cta_btn_calc: "Calculate Project",
+        cta_btn_wa: "Text on WhatsApp",
+        footer_about: "Design and automation of websites, CRM systems, and tailored digital business solutions.",
+        footer_nav_head: "Navigation",
+        footer_serv_head: "Solutions",
+        f_s1: "Online Stores (E-commerce)",
+        f_s2: "Custom CRM Systems",
+        f_s3: "Corporate Websites",
+        f_s4: "Automation & API",
+        footer_contact_head: "Contact Us",
+        f_wa_text: "Text on WhatsApp",
+        copyright: "© 2026 SMART WEB SOLUTIONS / REGISCODE. All rights reserved."
+      }
+    };
+
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/30');
+        btn.classList.add('text-slate-400');
+      });
+
+      const selectedBtn = document.getElementById(`lang-${lang}`);
+      if (selectedBtn) {
+        selectedBtn.classList.add('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/30');
+        selectedBtn.classList.remove('text-slate-400');
+      }
+
+      const dict = translations[lang];
+      if (dict) {
+        document.documentElement.lang = lang;
+        document.getElementById('doc-title').innerText = dict.doc_title;
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            el.innerText = dict[key];
+          }
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>

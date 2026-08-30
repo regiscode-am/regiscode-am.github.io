@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="hy" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Web Solutions — Regiscode Web Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      word-break: break-word;
+      overflow-wrap: break-word;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white break-words hyphens-auto">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex flex-col group shrink-0">
+        <span class="text-base sm:text-lg md:text-xl font-black tracking-wider text-white uppercase leading-none group-hover:text-brand-400 transition">
+          SMART WEB SOLUTIONS
+        </span>
+        <span class="text-[10px] sm:text-[11px] font-bold text-slate-400 tracking-widest uppercase mt-1 flex items-center gap-1">
+          <span>REGISCODE</span>
+          <span class="text-slate-600">|</span>
+          <span>WEB STUDIO</span>
+          <span class="text-xs">🚀</span>
+        </span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-400">
+        <a href="car.html" data-lang-key="nav_services" class="hover:text-white transition">Ծառայություններ</a>
+        <a href="about.html" data-lang-key="nav_about" class="hover:text-white transition">Մեր մասին</a>
+        <a href="#calculator" data-lang-key="nav_calc" class="hover:text-white transition">Հաշվիչ / Հայտ</a>
+      </nav>
+
+      <!-- Language Selector & WhatsApp Container -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        
+        <!-- Animated Language Switcher Button -->
+        <div class="relative bg-slate-900/90 border border-slate-800 p-1 rounded-full flex items-center shadow-inner">
+          <button onclick="switchLanguage('hy')" id="lang-hy" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-white bg-brand-600 shadow-md shadow-brand-500/30">
+            ARM
+          </button>
+          <button onclick="switchLanguage('ru')" id="lang-ru" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white">
+            RUS
+          </button>
+          <button onclick="switchLanguage('en')" id="lang-en" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white">
+            ENG
+          </button>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/37433488275" target="_blank" class="flex items-center gap-2 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium hover:bg-emerald-600/30 transition shadow-lg shadow-emerald-500/10 text-xs sm:text-base">
+          <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
+          <span class="hidden sm:inline" data-lang-key="btn_wa_header">WhatsApp Կապ</span>
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-36 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(99,102,241,0.15),transparent_50%)]"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <span data-lang-key="hero_badge" class="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-brand-500/10 text-brand-400 border border-brand-500/20 inline-block mb-6">Web & Custom CRM Development</span>
+      <h1 data-lang-key="hero_title" class="text-5xl md:text-7xl font-black tracking-tight max-w-4xl mx-auto leading-tight mb-8">
+        Պրոֆեսիոնալ Կայքեր և CRM Համակարգեր
+      </h1>
+      <p data-lang-key="hero_desc" class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Անհատական լուծումներ օնլայն խանութների, ռեստորանների և բիզնեսների համար՝ ավտոմատացման ու վաճառքների աճի համար։
+      </p>
+      <a href="#calculator" class="inline-flex items-center gap-3 bg-gradient-to-r from-brand-600 to-indigo-600 px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-xl hover:shadow-brand-500/25 transition transform hover:-translate-y-0.5">
+        <span data-lang-key="hero_btn">Հաշվարկել Նախագծի Արժեքը</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Yearly Pricing Growth Graph (0-ից դանդաղ աճող) -->
+  <section id="pricing-growth" class="py-16 relative overflow-hidden bg-slate-950 border-t border-slate-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <span data-lang-key="graph_badge" class="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-brand-500/10 text-brand-400 border border-brand-500/20 inline-block mb-3">
+          Շուկայի Դինամիկա
+        </span>
+        <h3 data-lang-key="graph_title" class="text-3xl md:text-4xl font-bold text-white mb-3">
+          Կայքերի Մշակման Արժեքի Աճը (2020 - 2026)
+        </h3>
+        <p data-lang-key="graph_desc" class="text-slate-400 text-sm md:text-base">
+          Տեխնոլոգիաների բարդացման և անվտանգության պահանջների աճին համընթաց որակյալ կայքերի արժեքը տարիների ընթացքում բարձրացել է:
+        </p>
+      </div>
+
+      <!-- Graph Container -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 md:p-8 relative shadow-2xl backdrop-blur-xl">
+        
+        <!-- Live Display -->
+        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-800">
+          <div>
+            <span data-lang-key="graph_avg" class="text-xs uppercase tracking-wider text-slate-400 font-medium">Միջին Արժեք</span>
+            <div class="text-3xl md:text-4xl font-black text-brand-400 mt-1 flex items-center gap-1">
+              <span id="priceCounter">0</span>
+              <span data-lang-key="graph_currency" class="text-xl text-slate-300"> ֏</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <span data-lang-key="graph_year" class="text-xs uppercase tracking-wider text-slate-400 font-medium">Տարեթիվ</span>
+            <div id="yearLabel" class="text-xl md:text-2xl font-black text-slate-200 mt-1">
+              2020
+            </div>
+          </div>
+        </div>
+
+        <!-- SVG Graph Chart -->
+        <div class="relative w-full h-56 md:h-64">
+          <svg class="w-full h-full overflow-visible" viewBox="0 0 500 200" preserveAspectRatio="none">
+            <!-- Grid Lines -->
+            <line x1="0" y1="40" x2="500" y2="40" stroke="#1e293b" stroke-dasharray="4" />
+            <line x1="0" y1="90" x2="500" y2="90" stroke="#1e293b" stroke-dasharray="4" />
+            <line x1="0" y1="140" x2="500" y2="140" stroke="#1e293b" stroke-dasharray="4" />
+
+            <!-- Gradient Background -->
+            <defs>
+              <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0" />
+              </linearGradient>
+            </defs>
+
+            <!-- Gradient Area -->
+            <path id="chartArea" d="M 0 190 L 0 190 L 0 190 Z" fill="url(#chartGradient)" />
+
+            <!-- Animated Line -->
+            <path id="chartLine" fill="none" stroke="#6366f1" stroke-width="4" stroke-linecap="round" d="M 0 190 L 0 190" />
+            
+            <!-- Point -->
+            <circle id="chartPoint" cx="0" cy="190" r="7" fill="#818cf8" stroke="#ffffff" stroke-width="3" />
+          </svg>
+        </div>
+
+        <!-- Timeline Milestones -->
+        <div class="grid grid-cols-4 gap-2 text-center mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 font-bold">
+          <div data-lang-key="m_2020">2020 թ.</div>
+          <div data-lang-key="m_2022">2022 թ.</div>
+          <div data-lang-key="m_2024">2024 թ.</div>
+          <div data-lang-key="m_2026" class="text-brand-400">2026 թ. (Այսօր)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Form Section -->
+  <section id="calculator" class="py-20 relative">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-60 h-60 bg-brand-500/10 rounded-full blur-3xl"></div>
+        
+        <h2 data-lang-key="form_title" class="text-3xl font-bold text-center mb-2">Ուղարկեք Հայտ & Ստացեք Հաշվարկ</h2>
+        <p data-lang-key="form_desc" class="text-slate-400 text-center mb-10">Լրացրեք տվյալները, և մենք կկապնվենք Ձեզ հետ պատրաստի գնառաջարկով:</p>
+
+        <form id="leadForm" class="space-y-8">
+          
+          <!-- Step 1: Site Type -->
+          <div class="space-y-4">
+            <label data-lang-key="s1_label" class="block text-sm font-semibold uppercase tracking-wider text-slate-400">1. Կայքի կամ Համակարգի տեսակը</label>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <label class="cursor-pointer">
+                <input type="radio" name="siteType" value="E-commerce (Խանութ)" class="peer hidden" checked>
+                <div class="p-4 rounded-xl border border-slate-800 bg-slate-950/50 peer-checked:border-brand-500 peer-checked:bg-brand-500/10 transition text-center space-y-2">
+                  <i class="fa-solid fa-cart-shopping text-2xl text-brand-400"></i>
+                  <div data-lang-key="t_store" class="text-sm font-medium">Օնլայն Խանութ</div>
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="siteType" value="Business Website" class="peer hidden">
+                <div class="p-4 rounded-xl border border-slate-800 bg-slate-950/50 peer-checked:border-brand-500 peer-checked:bg-brand-500/10 transition text-center space-y-2">
+                  <i class="fa-solid fa-briefcase text-2xl text-brand-400"></i>
+                  <div data-lang-key="t_biz" class="text-sm font-medium">Բիզնես Կայք</div>
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="siteType" value="CRM System" class="peer hidden">
+                <div class="p-4 rounded-xl border border-slate-800 bg-slate-950/50 peer-checked:border-brand-500 peer-checked:bg-brand-500/10 transition text-center space-y-2">
+                  <i class="fa-solid fa-chart-line text-2xl text-brand-400"></i>
+                  <div data-lang-key="t_crm" class="text-sm font-medium">CRM Համակարգ</div>
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="siteType" value="Custom Solution" class="peer hidden">
+                <div class="p-4 rounded-xl border border-slate-800 bg-slate-950/50 peer-checked:border-brand-500 peer-checked:bg-brand-500/10 transition text-center space-y-2">
+                  <i class="fa-solid fa-code text-2xl text-brand-400"></i>
+                  <div data-lang-key="t_custom" class="text-sm font-medium">Custom Նախագիծ</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Industry & Audience -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label data-lang-key="s2_label" class="block text-sm font-semibold uppercase tracking-wider text-slate-400">2. Բիզնեսի Ոլորտը</label>
+              <select id="industry" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 focus:border-brand-500 focus:outline-none text-slate-200">
+                <option value="Օծանելիք / Կոսմետիկա" data-lang-key="ind_perfume">Օծանելիք / Կոսմետիկա</option>
+                <option value="Հագուստ / Աքսեսուարներ" data-lang-key="ind_clothes">Հագուստ / Աքսեսուարներ</option>
+                <option value="Ռեստորան / Սնունդ" data-lang-key="ind_food">Ռեստորան / Սնունդ</option>
+                <option value="Ծառայություններ / B2B" data-lang-key="ind_services">Ծառայություններ / B2B</option>
+                <option value="Այլ Ոլորտ" data-lang-key="ind_other">Այլ Ոլորտ</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label data-lang-key="s3_label" class="block text-sm font-semibold uppercase tracking-wider text-slate-400">3. Ակնկալվող Լսարան / Ամիս</label>
+              <select id="audience" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 focus:border-brand-500 focus:outline-none text-slate-200">
+                <option value="Մինչև 1,000" data-lang-key="aud_1k">Մինչև 1,000 այցելու</option>
+                <option value="1,000 - 10,000" data-lang-key="aud_10k">1,000 - 10,000 այցելու</option>
+                <option value="10,000 - 50,000" data-lang-key="aud_50k">10,000 - 50,000 այցելու</option>
+                <option value="50,000+" data-lang-key="aud_max">50,000+ այցելու</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 3: Contact Info -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label data-lang-key="s4_label" class="block text-sm font-semibold uppercase tracking-wider text-slate-400">4. Ձեր Անունը</label>
+              <input type="text" id="clientName" placeholder="Արամ" data-lang-placeholder="ph_name" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 focus:border-brand-500 focus:outline-none text-slate-200">
+            </div>
+            <div class="space-y-2">
+              <label data-lang-key="s5_label" class="block text-sm font-semibold uppercase tracking-wider text-slate-400">5. Հեռախոսահամար</label>
+              <input type="tel" id="clientPhone" placeholder="099123456" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 focus:border-brand-500 focus:outline-none text-slate-200">
+            </div>
+          </div>
+
+          <button type="submit" id="submitBtn" data-lang-key="btn_submit" class="w-full bg-gradient-to-r from-brand-600 to-indigo-600 py-4 rounded-xl font-bold text-lg hover:opacity-95 transition shadow-lg shadow-brand-500/20">
+            Ուղարկել Հայտը
+          </button>
+        </form>
+
+        <div id="successMsg" class="hidden text-center py-8 space-y-4">
+          <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-2xl">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3 data-lang-key="success_title" class="text-2xl font-bold text-white">Հայտն Ուղարկված է</h3>
+          <p data-lang-key="success_desc" class="text-slate-400">Մենք կուսումնասիրենք Ձեր տվյալները և շուտով կզանգահարենք պատրաստի հաշվարկով։</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 pt-16 pb-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      
+      <!-- Studio Info -->
+      <div class="space-y-4 md:col-span-1">
+        <div class="flex flex-col">
+          <span class="text-lg font-black tracking-wider text-white uppercase leading-none">
+            SMART WEB SOLUTIONS
+          </span>
+          <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase mt-1 flex items-center gap-1">
+            <span>REGISCODE</span>
+            <span class="text-slate-600">|</span>
+            <span>WEB STUDIO</span>
+            <span class="text-xs">🚀</span>
+          </span>
+        </div>
+        <p data-lang-key="footer_desc" class="text-sm text-slate-400 leading-relaxed">
+          Վեբ կայքերի, CRM համակարգերի և բիզնես լուծումների նախագծում ու ավտոմատացում։
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-3">
+        <h4 data-lang-key="footer_nav" class="text-white font-bold uppercase text-xs tracking-widest">Նավիգացիա</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="car.html" data-lang-key="nav_services" class="hover:text-brand-400 transition">Ծառայություններ</a></li>
+          <li><a href="about.html" data-lang-key="nav_about" class="hover:text-brand-400 transition">Մեր մասին</a></li>
+          <li><a href="#calculator" data-lang-key="nav_calc" class="hover:text-brand-400 transition">Հաշվիչ / Հայտ</a></li>
+        </ul>
+      </div>
+
+      <!-- Services List -->
+      <div class="space-y-3">
+        <h4 data-lang-key="footer_services" class="text-white font-bold uppercase text-xs tracking-widest">Ուղղություններ</h4>
+        <ul class="space-y-2 text-sm">
+          <li data-lang-key="f_s1">Օնլայն Խանութներ (E-commerce)</li>
+          <li data-lang-key="f_s2">Անհատական CRM Համակարգեր</li>
+          <li data-lang-key="f_s3">Բիզնես Վեբ Կայքեր</li>
+          <li data-lang-key="f_s4">Ավտոմատացում & API</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-3">
+        <h4 data-lang-key="footer_contact" class="text-white font-bold uppercase text-xs tracking-widest">Կապ Մեզ Հետ</h4>
+        <div class="space-y-2 text-sm">
+          <p class="flex items-center gap-2">
+            <i class="fa-solid fa-phone text-brand-400"></i>
+            <span>+374 33 488275</span>
+          </p>
+<p class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-brand-400"></i>
+            <a href="mailto:regiscode.am@gmail.com" class="hover:underline hover:text-white transition">regiscode.am@gmail.com</a>
+          </p>
+          
+          <p class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+            <a href="https://wa.me/37433488275" target="_blank" data-lang-key="btn_wa" class="hover:underline">WhatsApp Գրել</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <p>© 2026 SMART WEB SOLUTIONS / REGISCODE. <span data-lang-key="copyright">Բոլոր իրավունքները պաշտպանված են:</span></p>
+      <div class="flex gap-4">
+        <a href="car.html" data-lang-key="nav_services" class="hover:text-slate-400 transition">Ծառայություններ</a>
+        <a href="about.html" data-lang-key="nav_about" class="hover:text-slate-400 transition">Մեր մասին</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Language Switcher & Full Translation System Script -->
+  <script>
+    const translations = {
+      hy: {
+        nav_services: "Ծառայություններ",
+        nav_about: "Մեր մասին",
+        nav_calc: "Հաշվիչ / Հայտ",
+        btn_wa_header: "WhatsApp Կապ",
+        hero_badge: "Web & Custom CRM Development",
+        hero_title: "Պրոֆեսիոնալ Կայքեր և CRM Համակարգեր",
+        hero_desc: "Անհատական լուծումներ օնլայն խանութների, ռեստորանների և բիզնեսների համար՝ ավտոմատացման ու վաճառքների աճի համար։",
+        hero_btn: "Հաշվարկել Նախագծի Արժեքը",
+        graph_badge: "Շուկայի Դինամիկա",
+        graph_title: "Կայքերի Մշակման Արժեքի Աճը (2020 - 2026)",
+        graph_desc: "Տեխնոլոգիաների բարդացման և անվտանգության պահանջների աճին համընթաց որակյալ կայքերի արժեքը տարիների ընթացքում բարձրացել է:",
+        graph_avg: "Միջին Արժեք",
+        graph_currency: " ֏",
+        graph_year: "Տարեթիվ",
+        m_2020: "2020 թ.",
+        m_2022: "2022 թ.",
+        m_2024: "2024 թ.",
+        m_2026: "2026 թ. (Այսօր)",
+        form_title: "Ուղարկեք Հայտ & Ստացեք Հաշվարկ",
+        form_desc: "Լրացրեք տվյալները, և մենք կկապնվենք Ձեզ հետ պատրաստի գնառաջարկով:",
+        s1_label: "1. Կայքի կամ Համակարգի տեսակը",
+        t_store: "Օնլայն Խանութ",
+        t_biz: "Բիզնես Կայք",
+        t_crm: "CRM Համակարգ",
+        t_custom: "Custom Նախագիծ",
+        s2_label: "2. Բիզնեսի Ոլորտը",
+        ind_perfume: "Օծանելիք / Կոսմետիկա",
+        ind_clothes: "Հագուստ / Աքսեսուարներ",
+        ind_food: "Ռեստորան / Սնունդ",
+        ind_services: "Ծառայություններ / B2B",
+        ind_other: "Այլ Ոլորտ",
+        s3_label: "3. Ակնկալվող Լսարան / Ամիս",
+        aud_1k: "Մինչև 1,000 այցելու",
+        aud_10k: "1,000 - 10,000 այցելու",
+        aud_50k: "10,000 - 50,000 այցելու",
+        aud_max: "50,000+ այցելու",
+        s4_label: "4. Ձեր Անունը",
+        ph_name: "Արամ",
+        s5_label: "5. Հեռախոսահամար",
+        btn_submit: "Ուղարկել Հայտը",
+        success_title: "Հայտն Ուղարկված է",
+        success_desc: "Մենք կուսումնասիրենք Ձեր տվյալները և շուտով կզանգահարենք պատրաստի հաշվարկով։",
+        footer_desc: "Վեբ կայքերի, CRM համակարգերի և բիզնես լուծումների նախագծում ու ավտոմատացում։",
+        footer_nav: "Նավիգացիա",
+        footer_services: "Ուղղություններ",
+        footer_contact: "Կապ Մեզ Հետ",
+        f_s1: "Օնլայն Խանութներ (E-commerce)",
+        f_s2: "Անհատական CRM Համակարգեր",
+        f_s3: "Բիզնես Վեբ Կայքեր",
+        f_s4: "Ավտոմատացում & API",
+        btn_wa: "WhatsApp Գրել",
+        copyright: "Բոլոր իրավունքները պաշտպանված են:"
+      },
+      ru: {
+        nav_services: "Услуги",
+        nav_about: "О нас",
+        nav_calc: "Калькулятор / Заявка",
+        btn_wa_header: "WhatsApp Связь",
+        hero_badge: "Разработка Веб & Custom CRM",
+        hero_title: "Профессиональные Сайты и CRM Системы",
+        hero_desc: "Индивидуальные решения для интернет-магазинов, ресторанов и бизнеса для автоматизации и роста продаж.",
+        hero_btn: "Рассчитать Стоимость",
+        graph_badge: "Динамика Рынка",
+        graph_title: "Рост Стоимости Разработки Сайтов (2020 - 2026)",
+        graph_desc: "С усложнением технологий и ростом требований к безопасности стоимость качественных сайтов за последние годы выросла.",
+        graph_avg: "Средняя Цена",
+        graph_currency: " ֏",
+        graph_year: "Год",
+        m_2020: "2020 г.",
+        m_2022: "2022 г.",
+        m_2024: "2024 г.",
+        m_2026: "2026 г. (Сегодня)",
+        form_title: "Отправьте Заявку & Получите Расчет",
+        form_desc: "Заполните данные, и мы свяжемся с вами с готовым коммерческим предложением:",
+        s1_label: "1. Тип Сайта или Системы",
+        t_store: "Интернет-Магазин",
+        t_biz: "Бизнес Сайт",
+        t_crm: "CRM Система",
+        t_custom: "Custom Проект",
+        s2_label: "2. Сфера Бизнеса",
+        ind_perfume: "Парфюмерия / Косметика",
+        ind_clothes: "Одежда / Аксессуары",
+        ind_food: "Рестораны / Еда",
+        ind_services: "Услуги / B2B",
+        ind_other: "Другая Сфера",
+        s3_label: "3. Ожидаемый Трафик / Месяц",
+        aud_1k: "До 1,000 посетителей",
+        aud_10k: "1,000 - 10,000 посетителей",
+        aud_50k: "10,000 - 50,000 посетителей",
+        aud_max: "50,000+ посетителей",
+        s4_label: "4. Ваше Имя",
+        ph_name: "Арам",
+        s5_label: "5. Номер Телефона",
+        btn_submit: "Отправить Заявку",
+        success_title: "Заявка Отправлена",
+        success_desc: "Мы изучим ваши данные и вскоре перезвоним с готовым расчетом.",
+        footer_desc: "Проектирование и автоматизация веб-сайтов, CRM-систем и бизнес-решений.",
+        footer_nav: "Навигация",
+        footer_services: "Направления",
+        footer_contact: "Контакты",
+        f_s1: "Интернет-магазины (E-commerce)",
+        f_s2: "Индивидуальные CRM Системы",
+        f_s3: "Бизнес Сайты",
+        f_s4: "Автоматизация & API",
+        btn_wa: "Написать в WhatsApp",
+        copyright: "Все права защищены."
+      },
+      en: {
+        nav_services: "Services",
+        nav_about: "About Us",
+        nav_calc: "Calculator / Request",
+        btn_wa_header: "WhatsApp Contact",
+        hero_badge: "Web & Custom CRM Development",
+        hero_title: "Professional Websites & CRM Systems",
+        hero_desc: "Custom solutions for online stores, restaurants, and businesses aimed at automation and boosting sales revenue.",
+        hero_btn: "Calculate Project Price",
+        graph_badge: "Market Dynamics",
+        graph_title: "Website Development Cost Growth (2020 - 2026)",
+        graph_desc: "With technological advancement and higher security standards, high-quality development costs have grown over the years.",
+        graph_avg: "Average Price",
+        graph_currency: " ֏",
+        graph_year: "Year",
+        m_2020: "2020",
+        m_2022: "2022",
+        m_2024: "2024",
+        m_2026: "2026 (Today)",
+        form_title: "Send Request & Get Estimate",
+        form_desc: "Fill in the details, and we will get back to you with a tailored quote:",
+        s1_label: "1. Project or System Type",
+        t_store: "Online Store",
+        t_biz: "Business Website",
+        t_crm: "CRM System",
+        t_custom: "Custom Project",
+        s2_label: "2. Business Field",
+        ind_perfume: "Perfumes / Cosmetics",
+        ind_clothes: "Clothing / Accessories",
+        ind_food: "Restaurant / Food",
+        ind_services: "Services / B2B",
+        ind_other: "Other Field",
+        s3_label: "3. Expected Audience / Month",
+        aud_1k: "Up to 1,000 visitors",
+        aud_10k: "1,000 - 10,000 visitors",
+        aud_50k: "10,000 - 50,000 visitors",
+        aud_max: "50,000+ visitors",
+        s4_label: "4. Your Name",
+        ph_name: "Aram",
+        s5_label: "5. Phone Number",
+        btn_submit: "Submit Request",
+        success_title: "Request Sent",
+        success_desc: "We will analyze your project details and get back to you shortly with a full proposal.",
+        footer_desc: "Design and automation of websites, CRM systems, and tailored business solutions.",
+        footer_nav: "Navigation",
+        footer_services: "Solutions",
+        footer_contact: "Contact Us",
+        f_s1: "E-commerce Platforms",
+        f_s2: "Custom CRM Systems",
+        f_s3: "Corporate Websites",
+        f_s4: "Automation & API Integration",
+        btn_wa: "Write on WhatsApp",
+        copyright: "All rights reserved."
+      }
+    };
+
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/30');
+        btn.classList.add('text-slate-400');
+      });
+
+      const selectedBtn = document.getElementById(`lang-${lang}`);
+      if (selectedBtn) {
+        selectedBtn.classList.add('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/30');
+        selectedBtn.classList.remove('text-slate-400');
+      }
+
+      const langData = translations[lang];
+      if (!langData) return;
+
+      document.querySelectorAll('[data-lang-key]').forEach(el => {
+        const key = el.getAttribute('data-lang-key');
+        if (langData[key]) {
+          el.textContent = langData[key];
+        }
+      });
+
+      document.querySelectorAll('[data-lang-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-lang-placeholder');
+        if (langData[key]) {
+          el.placeholder = langData[key];
+        }
+      });
+
+      localStorage.setItem('app_lang', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('app_lang') || 'hy';
+      switchLanguage(savedLang);
+    });
+  </script>
+
+  <!-- One-Time Slow Growth Script (2020 - 2026) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const section = document.getElementById("pricing-growth");
+      const counter = document.getElementById("priceCounter");
+      const yearLabel = document.getElementById("yearLabel");
+      const chartLine = document.getElementById("chartLine");
+      const chartArea = document.getElementById("chartArea");
+      const chartPoint = document.getElementById("chartPoint");
+
+      if (!section || !counter) return;
+
+      let hasAnimated = false;
+      const targetPrice = 650000; // 2026-ի միջին արժեքը
+      const startPrice = 180000;  // 2020-ի միջին արժեքը
+      const duration = 3000;      // 3 վայրկյան դանդաղ աճ
+
+      const runGrowthAnimation = () => {
+        if (hasAnimated) return;
+        
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.85) {
+          hasAnimated = true; // Ապահովում է, որ միայն 1 անգամ կատարվի
+
+          let startTime = null;
+
+          function animate(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const runtime = timestamp - startTime;
+            let progress = Math.min(runtime / duration, 1);
+            
+            // Easing function for natural growth curve
+            const easeProgress = Math.pow(progress, 1.2);
+
+            // Calculate current price and year
+            const currentPrice = Math.round(startPrice + (targetPrice - startPrice) * easeProgress);
+            const currentYear = Math.round(2020 + (2026 - 2020) * easeProgress);
+
+            counter.textContent = currentPrice.toLocaleString();
+            yearLabel.textContent = currentYear + " թ.";
+
+            // SVG Path Calculations
+            const startX = 0, startY = 170;
+            const endX = 500 * easeProgress;
+            const currentY = 170 - (130 * Math.pow(easeProgress, 1.4));
+
+            const controlX = endX * 0.5;
+            const controlY = 170 - (130 * Math.pow(easeProgress, 2) * 0.5);
+
+            const linePath = `M ${startX} ${startY} Q ${controlX} ${controlY} ${endX} ${currentY}`;
+            const areaPath = `M ${startX} ${startY} Q ${controlX} ${controlY} ${endX} ${currentY} L ${endX} 190 L 0 190 Z`;
+
+            chartLine.setAttribute("d", linePath);
+            chartArea.setAttribute("d", areaPath);
+            chartPoint.setAttribute("cx", endX);
+            chartPoint.setAttribute("cy", currentY);
+
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            }
+          }
+
+          requestAnimationFrame(animate);
+        }
+      };
+
+      window.addEventListener("scroll", runGrowthAnimation);
+      runGrowthAnimation();
+    });
+  </script>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

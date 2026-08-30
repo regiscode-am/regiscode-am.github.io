@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="hy" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ծառայություններ — SMART WEB SOLUTIONS / REGISCODE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      word-break: break-word;
+      overflow-wrap: break-word;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white break-words hyphens-auto">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex flex-col group shrink-0">
+        <span class="text-base sm:text-lg md:text-xl font-black tracking-wider text-white uppercase leading-none group-hover:text-brand-400 transition">
+          SMART WEB SOLUTIONS
+        </span>
+        <span class="text-[10px] sm:text-[11px] font-bold text-slate-400 tracking-widest uppercase mt-1 flex items-center gap-1">
+          <span>REGISCODE</span>
+          <span class="text-slate-600">|</span>
+          <span>WEB STUDIO</span>
+          <span class="text-xs">🚀</span>
+        </span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-400">
+        <a href="index.html" data-lang-key="nav_home" class="hover:text-white transition">Գլխավոր</a>
+        <a href="car.html" data-lang-key="nav_services" class="text-brand-400 font-semibold">Ծառայություններ</a>
+        <a href="about.html" data-lang-key="nav_about" class="hover:text-white transition">Մեր մասին</a>
+        <a href="index.html#calculator" data-lang-key="nav_calc" class="hover:text-white transition">Հաշվիչ / Հայտ</a>
+      </nav>
+
+      <!-- Language Selector & WhatsApp Container -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        
+        <!-- Animated Language Switcher Button -->
+        <div class="relative bg-slate-900/90 border border-slate-800 p-1 rounded-full flex items-center shadow-inner">
+          <button onclick="switchLanguage('hy')" id="lang-hy" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-white bg-brand-600 shadow-md shadow-brand-500/30">
+            ARM
+          </button>
+          <button onclick="switchLanguage('ru')" id="lang-ru" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white">
+            RUS
+          </button>
+          <button onclick="switchLanguage('en')" id="lang-en" class="lang-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 text-slate-400 hover:text-white">
+            ENG
+          </button>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/37433488275" target="_blank" class="flex items-center gap-2 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium hover:bg-emerald-600/30 transition shadow-lg shadow-emerald-500/10 text-xs sm:text-sm">
+          <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
+          <span class="hidden sm:inline" data-lang-key="btn_wa_header">WhatsApp Կապ</span>
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 sm:pt-36 pb-12 sm:pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,_rgba(99,102,241,0.12),transparent_60%)]"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4 sm:space-y-6">
+      <span data-lang-key="hero_badge" class="px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-widest bg-brand-500/10 text-brand-400 border border-brand-500/20 inline-block">
+        Մեր Ծառայություններն Ու Լուծումները
+      </span>
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight sm:leading-tight">
+        <span data-lang-key="hero_title_1">Բարձրակարգ Վեբ Լուծումներ</span> <span data-lang-key="hero_title_2" class="bg-gradient-to-r from-brand-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">Ձեր Բիզնեսի Աճի Համար</span>
+      </h1>
+      <p data-lang-key="hero_desc" class="text-slate-400 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed sm:leading-relaxed">
+        Ստեղծում ենք ժամանակակից, արագ, անվտանգ և 100% ադապտիվ վեբ կայքեր, e-commerce պլատֆորմներ ու CRM համակարգեր, որոնք ավտոմատացնում են ձեր բիզնես գործընթացները:
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-12 sm:py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
+        
+        <!-- Service 1 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-brand-500/50 transition duration-300 space-y-4 relative group">
+          <div class="w-14 h-14 bg-brand-500/10 text-brand-400 rounded-2xl flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <h3 data-lang-key="s1_title" class="text-xl font-bold text-white">Օնլայն Խանութներ (E-commerce)</h3>
+          <p data-lang-key="s1_desc" class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Ամբողջական օնլայն խանութների մշակում՝ ապրանքացանկով, զամբյուղով, պատվերների կառավարման վահանակով և Firebase cloud storage-ի աջակցությամբ։
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> <span data-lang-key="s1_feat1">Հարմարավետ Զամբյուղ & Պատվեր</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> <span data-lang-key="s1_feat2">Արագ որոնում & Ֆիլտրում</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> <span data-lang-key="s1_feat3">Mobile-Optimized Interface</span></li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-brand-500/50 transition duration-300 space-y-4 relative group">
+          <div class="w-14 h-14 bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h3 data-lang-key="s2_title" class="text-xl font-bold text-white">Custom CRM & ERP Համակարգեր</h3>
+          <p data-lang-key="s2_desc" class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Ձեր բիզնեսի առանձնահատկություններին համապատասխանեցված ներքին համակարգեր՝ հաճախորդների, պատվերների, պահեստի և հաշվետվությունների ավտոմատ կառավարման համար։
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> <span data-lang-key="s2_feat1">Իրական ժամանակի վիճակագրություն</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> <span data-lang-key="s2_feat2">Դերերի և իրավասությունների բաշխում</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> <span data-lang-key="s2_feat3">Հաշվետվությունների ավտոմատացում</span></li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-brand-500/50 transition duration-300 space-y-4 relative group">
+          <div class="w-14 h-14 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 data-lang-key="s3_title" class="text-xl font-bold text-white">Բիզնես Կայքեր & Landing Pages</h3>
+          <p data-lang-key="s3_desc" class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Ներկայացուցչական կայքեր և բարձր կոնվերսիա ապահովող Landing Page-եր, որոնք լավագույնս փոխանցում են Ձեր ծառայությունների ու ապրանքների արժեքը ապագա հաճախորդներին:
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> <span data-lang-key="s3_feat1">Ժամանակակից UI/UX դիզայն</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> <span data-lang-key="s3_feat2">Բարձր բեռնավորման արագություն</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> <span data-lang-key="s3_feat3">WhatsApp / Telegram ինտեգրում</span></li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-brand-500/50 transition duration-300 space-y-4 relative group">
+          <div class="w-14 h-14 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 data-lang-key="s4_title" class="text-xl font-bold text-white">UI/UX Redesign & Մոդեռնիզացում</h3>
+          <p data-lang-key="s4_desc" class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            Հնացած կայքերի լիարժեք արդիականացում, դիզայնի թարմացում, Tailwind CSS-ով վերակառուցում և օգտագործման հարմարավետության բարձրացում:
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800/80">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> <span data-lang-key="s4_feat1">Modern Dark / Light Mode</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> <span data-lang-key="s4_feat2">Ինտերակտիվ անիմացիաներ</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> <span data-lang-key="s4_feat3">Clean Code Architecture</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="py-16 bg-slate-900/40 border-y border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 space-y-3">
+        <h2 data-lang-key="tech_title" class="text-2xl sm:text-3xl font-bold">Մեր Օգտագործած Տեխնոլոգիաները</h2>
+        <p data-lang-key="tech_desc" class="text-slate-400 text-sm sm:text-base">Ժամանակակից և հուսալի գործիքներ՝ բարձր արդյունավետության համար</p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-slate-400 font-bold text-sm sm:text-base">
+        <div class="flex items-center gap-2 bg-slate-950 px-5 py-3 rounded-2xl border border-slate-800"><i class="fa-brands fa-html5 text-orange-500 text-xl"></i> HTML5 & CSS3</div>
+        <div class="flex items-center gap-2 bg-slate-950 px-5 py-3 rounded-2xl border border-slate-800"><i class="fa-brands fa-css3-alt text-sky-400 text-xl"></i> Tailwind CSS</div>
+        <div class="flex items-center gap-2 bg-slate-950 px-5 py-3 rounded-2xl border border-slate-800"><i class="fa-brands fa-js text-yellow-400 text-xl"></i> JavaScript (ES6+)</div>
+        <div class="flex items-center gap-2 bg-slate-950 px-5 py-3 rounded-2xl border border-slate-800"><i class="fa-brands fa-python text-blue-400 text-xl"></i> Python</div>
+        <div class="flex items-center gap-2 bg-slate-950 px-5 py-3 rounded-2xl border border-slate-800"><i class="fa-solid fa-fire text-amber-500 text-xl"></i> Firebase / Firestore</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animated Accordion FAQ Section -->
+  <section class="py-16 sm:py-20 relative">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 space-y-3">
+        <h2 data-lang-key="faq_title" class="text-2xl sm:text-3xl font-bold">Հաճախ Տրվող Հարցեր</h2>
+        <p data-lang-key="faq_subtitle" class="text-slate-400 text-sm sm:text-base">Սեղմեք հարցերի վրա՝ պատասխանները տեսնելու համար</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Accordion Item 1 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden transition">
+          <button onclick="toggleFaq(1)" class="w-full p-5 sm:p-6 text-left font-bold text-white flex items-center justify-between gap-4 hover:bg-slate-800/40 transition">
+            <span data-lang-key="faq_q1" class="text-base sm:text-lg">Որքա՞ն ժամանակ է պահանջվում կայքի պատրաստման համար:</span>
+            <i id="faq-icon-1" class="fa-solid fa-chevron-down text-brand-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faq-answer-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-slate-400 leading-relaxed">
+            <div data-lang-key="faq_a1" class="pb-6 pt-1 border-t border-slate-800/60">
+              Պարզ Landing Page-երը կամ բիզնես կայքերը պատրաստ են լինում 3-7 աշխատանքային օրում, իսկ բարդ E-commerce խանութները կամ Custom CRM համակարգերը՝ 2-4 շաբաթում:
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden transition">
+          <button onclick="toggleFaq(2)" class="w-full p-5 sm:p-6 text-left font-bold text-white flex items-center justify-between gap-4 hover:bg-slate-800/40 transition">
+            <span data-lang-key="faq_q2" class="text-base sm:text-lg">Արդյո՞ք կայքը ադապտացված կլինի հեռախոսների համար:</span>
+            <i id="faq-icon-2" class="fa-solid fa-chevron-down text-brand-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faq-answer-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-slate-400 leading-relaxed">
+            <div data-lang-key="faq_a2" class="pb-6 pt-1 border-t border-slate-800/60">
+              Այո, մեր բոլոր նախագծերը 100% ադապտիվ են և կատարյալ աշխատում են բոլոր չափսերի սմարթֆոնների, պլանշետների և համակարգիչների վրա:
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden transition">
+          <button onclick="toggleFaq(3)" class="w-full p-5 sm:p-6 text-left font-bold text-white flex items-center justify-between gap-4 hover:bg-slate-800/40 transition">
+            <span data-lang-key="faq_q3" class="text-base sm:text-lg">Ինչպե՞ս է իրականացվում հետագա տեխնիկական սպասարկումը:</span>
+            <i id="faq-icon-3" class="fa-solid fa-chevron-down text-brand-400 transition-transform duration-300"></i>
+          </button>
+          <div id="faq-answer-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 sm:px-6 text-xs sm:text-sm text-slate-400 leading-relaxed">
+            <div data-lang-key="faq_a3" class="pb-6 pt-1 border-t border-slate-800/60">
+              Նախագծի հանձնումից հետո մենք տրամադրում ենք անվճար տեխնիկական աջակցություն, ինչպես նաև առաջարկում ենք երկարաժամկետ սպասարկման ճկուն տարբերակներ:
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-16 sm:py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-8">
+      <h2 data-lang-key="cta_title" class="text-2xl sm:text-4xl font-bold">Պատրաստ Ե՞ք Սկսել Ձեր Նախագիծը</h2>
+      <p data-lang-key="cta_desc" class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+        Ուղարկեք հայտ կամ գրեք մեզ WhatsApp-ով՝ անվճար խորհրդատվություն և ճշգրիտ հաշվարկ ստանալու համար:
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="index.html#calculator" data-lang-key="btn_calc" class="w-full sm:w-auto bg-gradient-to-r from-brand-600 to-indigo-600 px-8 py-3.5 rounded-xl font-bold hover:opacity-95 transition shadow-lg shadow-brand-500/20 text-center">
+          Հաշվարկել Նախագիծը
+        </a>
+        <a href="https://wa.me/37433488275" target="_blank" class="w-full sm:w-auto bg-slate-900 border border-slate-800 px-8 py-3.5 rounded-xl font-bold text-emerald-400 hover:bg-slate-800 transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span data-lang-key="btn_wa">Գրել WhatsApp-ին</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 pt-12 sm:pt-16 pb-10 sm:pb-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-10">
+      
+      <!-- Studio Info -->
+      <div class="space-y-4 md:col-span-1">
+        <div class="flex flex-col">
+          <span class="text-base sm:text-lg font-black tracking-wider text-white uppercase leading-none">
+            SMART WEB SOLUTIONS
+          </span>
+          <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase mt-1 flex items-center gap-1">
+            <span>REGISCODE</span>
+            <span class="text-slate-600">|</span>
+            <span>WEB STUDIO</span>
+            <span class="text-xs">🚀</span>
+          </span>
+        </div>
+        <p data-lang-key="footer_desc" class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          Վեբ կայքերի, CRM համակարգերի և բիզնես լուծումների նախագծում ու ավտոմատացում։
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-3">
+        <h4 data-lang-key="footer_nav" class="text-white font-bold uppercase text-xs tracking-widest">Նավիգացիա</h4>
+        <ul class="space-y-2 text-xs sm:text-sm">
+          <li><a href="index.html" data-lang-key="nav_home" class="hover:text-brand-400 transition">Գլխավոր</a></li>
+          <li><a href="car.html" data-lang-key="nav_services" class="hover:text-brand-400 transition">Ծառայություններ</a></li>
+          <li><a href="about.html" data-lang-key="nav_about" class="hover:text-brand-400 transition">Մեր մասին</a></li>
+          <li><a href="index.html#calculator" data-lang-key="nav_calc" class="hover:text-brand-400 transition">Հաշվիչ / Հայտ</a></li>
+        </ul>
+      </div>
+
+      <!-- Services List -->
+      <div class="space-y-3">
+        <h4 data-lang-key="footer_services" class="text-white font-bold uppercase text-xs tracking-widest">Ուղղություններ</h4>
+        <ul class="space-y-2 text-xs sm:text-sm">
+          <li data-lang-key="f_s1">Օնլայն Խանութներ (E-commerce)</li>
+          <li data-lang-key="f_s2">Անհատական CRM Համակարգեր</li>
+          <li data-lang-key="f_s3">Բիզնես Վեբ Կայքեր</li>
+          <li data-lang-key="f_s4">Ավտոմատացում & API</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-3">
+        <h4 data-lang-key="footer_contact" class="text-white font-bold uppercase text-xs tracking-widest">Կապ Մեզ Հետ</h4>
+        <div class="space-y-2 text-xs sm:text-sm">
+          <p class="flex items-center gap-2">
+            <i class="fa-solid fa-phone text-brand-400"></i>
+            <span>+374 33 488275</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-brand-400"></i>
+            <a href="mailto:regiscode.am@gmail.com" class="hover:underline hover:text-white transition">regiscode.am@gmail.com</a>
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+            <a href="https://wa.me/37433488275" target="_blank" data-lang-key="btn_wa" class="hover:underline">WhatsApp Գրել</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-10 sm:mt-12 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center sm:text-left">
+      <p>© 2026 SMART WEB SOLUTIONS / REGISCODE. <span data-lang-key="copyright">Բոլոր իրավունքները պաշտպանված են:</span></p>
+      <div class="flex gap-4">
+        <a href="car.html" data-lang-key="nav_services" class="hover:text-slate-400 transition">Ծառայություններ</a>
+        <a href="about.html" data-lang-key="nav_about" class="hover:text-slate-400 transition">Մեր մասին</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Full Translations Dictionary
+    const translations = {
+      hy: {
+        nav_home: "Գլխավոր",
+        nav_services: "Ծառայություններ",
+        nav_about: "Մեր մասին",
+        nav_calc: "Հաշվիչ / Հայտ",
+        btn_wa_header: "WhatsApp Կապ",
+        hero_badge: "Մեր Ծառայություններն Ու Լուծումները",
+        hero_title_1: "Բարձրակարգ Վեբ Լուծումներ",
+        hero_title_2: "Ձեր Բիզնեսի Աճի Համար",
+        hero_desc: "Ստեղծում ենք ժամանակակից, արագ, անվտանգ և 100% ադապտիվ վեբ կայքեր, e-commerce պլատֆորմներ ու CRM համակարգեր, որոնք ավտոմատացնում են ձեր բիզնես գործընթացները:",
+        s1_title: "Օնլայն Խանութներ (E-commerce)",
+        s1_desc: "Ամբողջական օնլայն խանութների մշակում՝ ապրանքացանկով, զամբյուղով, պատվերների կառավարման վահանակով և Firebase cloud storage-ի աջակցությամբ։",
+        s1_feat1: "Հարմարավետ Զամբյուղ & Պատվեր",
+        s1_feat2: "Արագ որոնում & Ֆիլտրում",
+        s1_feat3: "Mobile-Optimized Interface",
+        s2_title: "Custom CRM & ERP Համակարգեր",
+        s2_desc: "Ձեր բիզնեսի առանձնահատկություններին համապատասխանեցված ներքին համակարգեր՝ հաճախորդների, պատվերների, պահեստի և հաշվետվությունների ավտոմատ կառավարման համար։",
+        s2_feat1: "Իրական ժամանակի վիճակագրություն",
+        s2_feat2: "Դերերի և իրավասությունների բաշխում",
+        s2_feat3: "Հաշվետվությունների ավտոմատացում",
+        s3_title: "Բիզնես Կայքեր & Landing Pages",
+        s3_desc: "Ներկայացուցչական կայքեր և բարձր կոնվերսիա ապահովող Landing Page-եր, որոնք լավագույնս փոխանցում են Ձեր ծառայությունների ու ապրանքների արժեքը ապագա հաճախորդներին:",
+        s3_feat1: "Ժամանակակից UI/UX դիզայն",
+        s3_feat2: "Բարձր բեռնավորման արագություն",
+        s3_feat3: "WhatsApp / Telegram ինտեգրում",
+        s4_title: "UI/UX Redesign & Մոդեռնիզացում",
+        s4_desc: "Հնացած կայքերի լիարժեք արդիականացում, դիզայնի թարմացում, Tailwind CSS-ով վերակառուցում և օգտագործման հարմարավետության բարձրացում:",
+        s4_feat1: "Modern Dark / Light Mode",
+        s4_feat2: "Ինտերակտիվ անիմացիաներ",
+        s4_feat3: "Clean Code Architecture",
+        tech_title: "Մեր Օգտագործած Տեխնոլոգիաները",
+        tech_desc: "Ժամանակակից և հուսալի գործիքներ՝ բարձր արդյունավետության համար",
+        faq_title: "Հաճախ Տրվող Հարցեր",
+        faq_subtitle: "Սեղմեք հարցերի վրա՝ պատասխանները տեսնելու համար",
+        faq_q1: "Որքա՞ն ժամանակ է պահանջվում կայքի պատրաստման համար:",
+        faq_a1: "Պարզ Landing Page-երը կամ բիզնես կայքերը պատրաստ են լինում 3-7 աշխատանքային օրում, իսկ բարդ E-commerce խանութները կամ Custom CRM համակարգերը՝ 2-4 շաբաթում:",
+        faq_q2: "Արդյո՞ք կայքը ադապտացված կլինի հեռախոսների համար:",
+        faq_a2: "Այո, մեր բոլոր նախագծերը 100% ադապտիվ են և կատարյալ աշխատում են բոլոր չափսերի սմարթֆոնների, պլանշետների և համակարգիչների վրա:",
+        faq_q3: "Ինչպե՞ս է իրականացվում հետագա տեխնիկական սպասարկումը:",
+        faq_a3: "Նախագծի հանձնումից հետո մենք տրամադրում ենք անվճար տեխնիկական աջակցություն, ինչպես նաև առաջարկում ենք երկարաժամկետ սպասարկման ճկուն տարբերակներ:",
+        cta_title: "Պատրաստ Ե՞ք Սկսել Ձեր Նախագիծը",
+        cta_desc: "Ուղարկեք հայտ կամ գրեք մեզ WhatsApp-ով՝ անվճար խորհրդատվություն և ճշգրիտ հաշվարկ ստանալու համար:",
+        btn_calc: "Հաշվարկել Նախագիծը",
+        btn_wa: "Գրել WhatsApp-ին",
+        footer_desc: "Վեբ կայքերի, CRM համակարգերի և բիզնես լուծումների նախագծում ու ավտոմատացում։",
+        footer_nav: "Նավիգացիա",
+        footer_services: "Ուղղություններ",
+        footer_contact: "Կապ Մեզ Հետ",
+        f_s1: "Օնլայն Խանութներ (E-commerce)",
+        f_s2: "Անհատական CRM Համակարգեր",
+        f_s3: "Բիզնես Վեբ Կայքեր",
+        f_s4: "Ավտոմատացում & API",
+        copyright: "Բոլոր իրավունքները պաշտպանված են:"
+      },
+      ru: {
+        nav_home: "Главная",
+        nav_services: "Услуги",
+        nav_about: "О нас",
+        nav_calc: "Калькулятор / Заявка",
+        btn_wa_header: "WhatsApp Связь",
+        hero_badge: "Наши Услуги и Решения",
+        hero_title_1: "Высококлассные Веб-Решения",
+        hero_title_2: "Для Роста Вашего Бизнеса",
+        hero_desc: "Создаем современные, быстрые, безопасные и 100% адаптивные сайты, e-commerce платформы и CRM системы, автоматизирующие ваши бизнес-процессы.",
+        s1_title: "Интернет-магазины (E-commerce)",
+        s1_desc: "Разработка полнофункциональных интернет-магазинов с каталогом, корзиной, панелью управления заказами и поддержкой Firebase cloud storage.",
+        s1_feat1: "Удобная корзина и оформление",
+        s1_feat2: "Быстрый поиск и фильтрация",
+        s1_feat3: "Мобильно-оптимизированный интерфейс",
+        s2_title: "Custom CRM & ERP Системы",
+        s2_desc: "Внутренние системы, разработанные под особенности вашего бизнеса для автоматического управления клиентами, заказами, складом и отчетами.",
+        s2_feat1: "Статистика в реальном времени",
+        s2_feat2: "Разграничение ролей и прав",
+        s2_feat3: "Автоматизация отчетности",
+        s3_title: "Бизнес Сайты & Landing Pages",
+        s3_desc: "Представительские сайты и лендинги с высокой конверсией, идеально передающие ценность ваших услуг и товаров будущим клиентам.",
+        s3_feat1: "Современный UI/UX дизайн",
+        s3_feat2: "Высокая скорость загрузки",
+        s3_feat3: "Интеграция с WhatsApp / Telegram",
+        s4_title: "UI/UX Редизайн и Модернизация",
+        s4_desc: "Полное обновление устаревших сайтов, модернизация дизайна, переработка на Tailwind CSS и повышение удобства использования.",
+        s4_feat1: "Современный Dark / Light Mode",
+        s4_feat2: "Интерактивные анимации",
+        s4_feat3: "Чистая архитектура кода",
+        tech_title: "Используемые Технологии",
+        tech_desc: "Современные и надежные инструменты для обеспечения максимальной производительности",
+        faq_title: "Часто Задаваемые Вопросы",
+        faq_subtitle: "Нажмите на вопрос, чтобы увидеть ответ",
+        faq_q1: "Сколько времени занимает разработка сайта?",
+        faq_a1: "Простые Landing Page или корпоративные сайты готовятся за 3-7 рабочих дней, а сложные интернет-магазины или CRM системы — за 2-4 недели.",
+        faq_q2: "Будет ли сайт адаптирован под мобильные телефоны?",
+        faq_a2: "Да, все наши проекты на 100% адаптивны и отлично работают на смартфонах, планшетах и компьютерах любого размера.",
+        faq_q3: "Как осуществляется последующее техническое обслуживание?",
+        faq_a3: "После сдачи проекта мы предоставляем бесплатную техническую поддержку, а также предлагаем гибкие варианты долгосрочного обслуживания.",
+        cta_title: "Готовы Начать Свой Проект?",
+        cta_desc: "Отправьте заявку или напишите нам в WhatsApp для получения бесплатной консультации и точного расчета:",
+        btn_calc: "Рассчитать Проект",
+        btn_wa: "Написать в WhatsApp",
+        footer_desc: "Проектирование и автоматизация веб-сайтов, CRM-систем и бизнес-решений.",
+        footer_nav: "Навигация",
+        footer_services: "Направления",
+        footer_contact: "Контакты",
+        f_s1: "Интернет-магазины (E-commerce)",
+        f_s2: "Индивидуальные CRM Системы",
+        f_s3: "Бизнес Сайты",
+        f_s4: "Автоматизация & API",
+        copyright: "Все права защищены."
+      },
+      en: {
+        nav_home: "Home",
+        nav_services: "Services",
+        nav_about: "About Us",
+        nav_calc: "Calculator / Request",
+        btn_wa_header: "WhatsApp Contact",
+        hero_badge: "Our Services & Solutions",
+        hero_title_1: "High-Quality Web Solutions",
+        hero_title_2: "For Your Business Growth",
+        hero_desc: "We build modern, fast, secure, and 100% responsive websites, e-commerce platforms, and CRM systems that automate your business processes.",
+        s1_title: "E-commerce Online Stores",
+        s1_desc: "Development of full-featured online stores with product catalogs, shopping carts, order management panels, and Firebase cloud storage integration.",
+        s1_feat1: "Convenient Cart & Checkout",
+        s1_feat2: "Fast Search & Filtering",
+        s1_feat3: "Mobile-Optimized Interface",
+        s2_title: "Custom CRM & ERP Systems",
+        s2_desc: "Internal management systems tailored specifically to your business needs for handling clients, orders, inventory, and automated reporting.",
+        s2_feat1: "Real-time Statistics",
+        s2_feat2: "Role & Permission Control",
+        s2_feat3: "Automated Reporting",
+        s3_title: "Business Websites & Landing Pages",
+        s3_desc: "High-converting promotional websites and landing pages designed to effectively communicate your brand's value to future clients.",
+        s3_feat1: "Modern UI/UX Design",
+        s3_feat2: "Lightning Fast Speed",
+        s3_feat3: "WhatsApp / Telegram Integration",
+        s4_title: "UI/UX Redesign & Modernization",
+        s4_desc: "Complete overhaul of outdated websites, design refresh, rebuilding with Tailwind CSS, and enhancing user experience.",
+        s4_feat1: "Modern Dark / Light Mode",
+        s4_feat2: "Interactive Animations",
+        s4_feat3: "Clean Code Architecture",
+        tech_title: "Technologies We Use",
+        tech_desc: "Modern and reliable tools for high performance and scalability",
+        faq_title: "Frequently Asked Questions",
+        faq_subtitle: "Click on questions to view the answers",
+        faq_q1: "How long does it take to build a website?",
+        faq_a1: "Simple landing pages or business websites take 3-7 business days, while complex e-commerce stores or custom CRM systems take 2-4 weeks.",
+        faq_q2: "Will the website be mobile friendly?",
+        faq_a2: "Yes, all our projects are 100% responsive and perform flawlessly on smartphones, tablets, and desktop displays.",
+        faq_q3: "How is technical support provided after launch?",
+        faq_a3: "After project handover, we provide free initial technical support, alongside flexible options for long-term maintenance.",
+        cta_title: "Ready to Start Your Project?",
+        cta_desc: "Submit a request or contact us via WhatsApp for a free consultation and exact pricing calculation:",
+        btn_calc: "Calculate Project",
+        btn_wa: "Write on WhatsApp",
+        footer_desc: "Design and automation of websites, CRM systems, and business solutions.",
+        footer_nav: "Navigation",
+        footer_services: "Solutions",
+        footer_contact: "Contact Us",
+        f_s1: "E-commerce Platforms",
+        f_s2: "Custom CRM Systems",
+        f_s3: "Corporate Websites",
+        f_s4: "Automation & API Integration",
+        copyright: "All rights reserved."
+      }
+    };
+
+    // Dynamic Language Switcher Function
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/30');
+        btn.classList.add('text-slate-400');
+      });
+
+      const selectedBtn = document.getElementById(`lang-${lang}`);
+      if (selectedBtn) {
+        selectedBtn.classList.add('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/30');
+        selectedBtn.classList.remove('text-slate-400');
+      }
+
+      const langData = translations[lang];
+      if (!langData) return;
+
+      document.querySelectorAll('[data-lang-key]').forEach(el => {
+        const key = el.getAttribute('data-lang-key');
+        if (langData[key]) {
+          el.textContent = langData[key];
+        }
+      });
+
+      localStorage.setItem('app_lang', lang);
+    }
+
+    // FAQ Accordion Function
+    function toggleFaq(id) {
+      const answer = document.getElementById(`faq-answer-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+      
+      if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+        answer.style.maxHeight = '0px';
+        icon.classList.remove('rotate-180');
+      } else {
+        document.querySelectorAll('[id^="faq-answer-"]').forEach(el => el.style.maxHeight = '0px');
+        document.querySelectorAll('[id^="faq-icon-"]').forEach(el => el.classList.remove('rotate-180'));
+
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Initialize Language on Load
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('app_lang') || 'hy';
+      switchLanguage(savedLang);
+    });
+  </script>
+
+</body>
+</html>
